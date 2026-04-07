@@ -3,14 +3,19 @@ body {
 }
 
 .alex-row {
-    display: flex; /* Creates the flexbox container */
-    flex-direction: row; /* Aligns items horizontally (default) */
-    flex-wrap: wrap; /* Allows items to wrap to a new line */
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
     width: 75%;
     margin: 0 auto;
 }
 
 .alex-purple {
     color: #9853E0;
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 75vh;
 }
 
