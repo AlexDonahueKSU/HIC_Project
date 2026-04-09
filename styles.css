@@ -10,12 +10,29 @@ body {
     margin: 0 auto;
 }
 
+.featured-element
+{
+    width: 20rem;
+    transition: transform 0.3s ease;
+}
+
+.featured-element:hover 
+{
+ transform: scale(1.1);
+}
+
+.featured-element-box
+{
+    background-color: #e04f62;
+    height: 500px;
+}
+
 .alex-purple {
     color: #9853E0;
 }
 
 .featured-image {
     width: 100%;
-    max-height: 75vh;
+    height: 200px;
 }
 
