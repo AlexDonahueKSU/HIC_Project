@@ -15,6 +15,7 @@
 .movie-buttons:hover{
     background-color: #c64fe0;
     color: white;
+    transform: scale(1.1);
 }
 
 .horizontal-scroll-wrapper{
@@ -26,8 +27,13 @@
 
 .horizontal-scroll-wrapper h1 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 2rem;
+}
+
+.horizontal-scroll-wrapper p{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .scroll-container{
@@ -44,7 +50,7 @@
     flex-shrink: 0;
     width: 400px;
     height: 400px;
-    background: white;
+    background: #cf88df;
     border: 0px;
     border-radius: 12px;
     padding: 30px;
@@ -60,6 +66,35 @@
 .review-image{
     width: 75%;
     height: 300px;
+}
+
+.review-image-FFH{
+    width: 70%;
+    height: 300px;
+}
+
+.scrollControl-button button {
+    padding: 10px 20px;
+    margin: 20px 10px;
+    background: #cf88df;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.scrollControl-button button:hover{
+    background: #c64fe0;
+    transform: scale(1.15);
+}
+
+.career{
+    color: white;
+}
+
+.career:hover{
+    color: #c64fe0;
 }
 
 @keyframes scroll-loop {
