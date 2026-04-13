@@ -1,3 +1,4 @@
+
 body {
     font-family: Inter, Arial, Helvetica, sans-serif !important;
 }
@@ -16,6 +17,11 @@ body {
     flex-wrap: wrap;
     width: 50%;
 }
+
+.h1-text{
+    font-size: 5rem;
+}
+
 
 .trailer-column{
     display: flex;
@@ -38,11 +44,23 @@ body {
 
 .featured-element
 {
+    cursor: pointer;
     width: 20rem;
     transition: transform 0.3s ease;
 }
 
+.card 
+{
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
 .featured-element:hover 
+{
+ transform: scale(1.1);
+}
+
+.card:hover 
 {
  transform: scale(1.1);
 }
@@ -55,6 +73,10 @@ body {
 
 .alex-purple {
     color: #9853E0;
+}
+
+.alex-pink{
+    color: #E29DD0;
 }
 
 .featured-image {
@@ -72,6 +94,13 @@ body {
     height: 100px;
 }
 
+.footer-link {
+    color: white;
+}
+.footer-link:hover
+{
+    color: #9853E0;
+}
 /* When screen is 1500px or less */
 @media (max-width: 1500px) {
     .trailer-column {
