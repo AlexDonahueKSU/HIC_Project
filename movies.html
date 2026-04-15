@@ -55,51 +55,36 @@
     </div>
     <div class="container">
         <div class="row gy-5">
-            <div class="col p-3"></div>
+            <div class="col p-3">
+
+            </div>
         </div>
     </div>
     <div class="horizontal-scroll-wrapper">
         <h1>Movie Reviews</h1>
-        <p>Hover to stop the auto scroll.</p>
+        <p>Use the arrows to browse reviews</p>
         <div class="scroll-container scrollMenu" id="autoScroll">
             <!--Reviews-->
             <button type="button" class="movie-buttons scroll-item">
                 <h3>Interstellar Review</h3>
-                <img class="review-image" src="/images/interstellar.jpg">
+                <img class="review-image" src="/images/interstellar.jpg" alt="Interstellar">
             </button>
             <button type="button" class="movie-buttons scroll-item">
                 <h3>Sharknado</h3>
-                <img class="review-image" src="/images/sharknado.jpeg">
+                <img class="review-image" src="/images/sharknado.jpeg" alt="Sharknado">
             </button>
             <button type="button" class="movie-buttons scroll-item">
                 <h3>Spider-Man: Far From Home</h3>
-                <img class="review-image" src="/images/spider-man-FFH.jpeg">
+                <img class="review-image" src="/images/spider-man-FFH.jpeg" alt="Spider-Man">
             </button>
             <button type="button" class="movie-buttons scroll-item">
                 <h3>The Lord of the Rings Trilogy</h3>
-                <img class="review-image" src="/images/LOTR-trilogy.jpg">
-            </button>
-            <!--Review Copies-->
-            <button type="button" class="movie-buttons scroll-item">
-                <h3>Interstellar Review</h3>
-                <img class="review-image" src="/images/interstellar.jpg">
-            </button>
-            <button type="button" class="movie-buttons scroll-item">
-                <h3>Sharknado</h3>
-                <img class="review-image" src="/images/sharknado.jpeg">
-            </button>
-            <button type="button" class="movie-buttons scroll-item">
-                <h3>Spider-Man: Far From Home</h3>
-                <img class="review-image-FFH" src="/images/spider-man-FFH.jpeg">
-            </button>
-            <button type="button" class="movie-buttons scroll-item">
-                <h3>The Lord of the Rings Trilogy</h3>
-                <img class="review-image" src="/images/LOTR-trilogy.jpg">
+                <img class="review-image" src="/images/LOTR-trilogy.jpg" alt="Lord of the Rings">
             </button>
         </div>
         <div class="scrollControl-button">
-            <button onclick="pauseScroll()">Pause</button>
-            <button onclick="playScroll()">Play</button>
+            <button id="slideLeft" type="button">← Previous</button>
+            <button id="slideRight" type="button">Next →</button>
         </div>
     </div>
 </main>
@@ -119,15 +104,28 @@
     </div>
 </footer>
 <script>
-    const autoScroller = document.getElementById('autoScroll');
-    let direction = 'normal';
+document.addEventListener("DOMContentLoaded", function(){
+    const buttonRight = document.getElementById('slideRight');
+    const buttonLeft = document.getElementById('slideLeft');
+    const container = document.getElementById('autoScroll');
 
-    function pauseScroll() {
-        autoScroller.style.animationPlayState = 'paused';
-    }
-    function playScroll() {
-        autoScroller.style.animationPlayState = 'running';
-    }
+    const scrollAmount = 430;
+
+    buttonRight.onclick = function() {
+        container.scrollLeft += scrollAmount;
+    };
+
+    buttonLeft.onclick = function() {
+        container.scrollLeft -= scrollAmount;
+    };
+
+    container.addEventListener('scroll', function(){
+        buttonLeft.disabled = container.scrollLeft <= 0;
+        buttonRight.disabled = container.scrollLeft >= container.scrollWidth - container.clientWidth;
+    });
+
+    buttonLeft.disabled = true;
+});
 </script>
 </body>
 </html>

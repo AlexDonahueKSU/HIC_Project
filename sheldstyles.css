@@ -1,3 +1,7 @@
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif !important;
+}
+
 .contact-button{
     transition-duration: 0.4s;
     background-color:#9853e0;
@@ -15,13 +19,12 @@
 .movie-buttons:hover{
     background-color: #c64fe0;
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .horizontal-scroll-wrapper{
     background: #f8f9fa;
     padding: 60px 0;
-    overflow: hidden;
     position: relative;
 }
 
@@ -38,12 +41,17 @@
 
 .scroll-container{
     display: flex;
-    width: fit-content;
-    animation: scroll-loop 25s linear infinite;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    gap: 30px;
+    padding: 20px;
+    scrollbar-width: none; /* Firfox Functionality*/
+    -ms-overflow-style: none; /* Edge Functionality */
 }
 
-.scroll-container:hover{
-    animation-play-state: paused;
+.scroll-container::-webkit-scrollbar{
+    display: none; /* Crhome/Safari Functionality */
 }
 
 .scroll-item {
@@ -60,7 +68,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-right: 100px;
 }
 
 .review-image{
@@ -73,6 +80,11 @@
     height: 300px;
 }
 
+.scrollControl-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .scrollControl-button button {
     padding: 10px 20px;
     margin: 20px 10px;
@@ -82,11 +94,18 @@
     border-radius: 3px;
     cursor: pointer;
     font-size: 15px;
+    transition: all 0.3s;
 }
 
 .scrollControl-button button:hover{
     background: #c64fe0;
     transform: scale(1.15);
+}
+
+.scrollControl-button button:disabled{
+    background: #ccc;
+    cursor: not-allowed;
+    transform: scale(1);
 }
 
 .career{
@@ -95,13 +114,4 @@
 
 .career:hover{
     color: #c64fe0;
-}
-
-@keyframes scroll-loop {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
 }
