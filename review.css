@@ -1,0 +1,36 @@
+h1
+{
+    text-align: center;
+}
+
+.header-img
+{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1800px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+
+}
+
+.about-text 
+{
+    display: flex;
+    margin: 0 auto;
+    align-self: center;
+    text-align: start;
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.quote-text
+{
+    margin: 0 auto;
+    align-self: center;
+    text-align: center; 
+    padding-bottom: 20px;
+    font-style: italic;
+}

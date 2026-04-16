@@ -3,6 +3,10 @@ body {
     font-family: Inter, Arial, Helvetica, sans-serif !important;
 }
 
+a {
+    text-decoration: none;
+}
+
 .alex-row {
     display: flex; 
     flex-direction: row; 
