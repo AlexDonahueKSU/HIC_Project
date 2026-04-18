@@ -78,6 +78,48 @@ body {
     margin-bottom: 20px;
 }
 
+.image-panel {
+    background: linear-gradient(160deg, var(--purple-dark), var(--purple-light));
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-panel img {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+}
+
+.form-bg-layout{
+    width: 100%;
+    max-width: 750px;
+    display: block;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.form-control{
+    border: 1.5px solid black;
+}
+
+.form-control:focus {
+    border-color: black;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.was-validated .form-control:invalid{
+    border-color: red;
+}
+
+.was-validated .form-control:valid{
+    border-color: green;
+}
+
 .review-image{
     width: 70%;
     height: 300px;
@@ -122,4 +164,8 @@ body {
 
 .career:hover{
     color: #c64fe0;
+}
+
+.footer-titles{
+    color: #9853e0;
 }
