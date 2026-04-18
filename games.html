@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="games.css">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="sheldstyles.css">
     <title>Spiral Games</title>
 </head>
 <body>
@@ -57,22 +58,42 @@
             </div>
             <div class="alex-row">
                 <div class="game-row">
-                    <div class="game-container">
-                        <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
-                        <p style="font-weight: bold;">Resident Evil: Requiem</p>
-                    </div>
-                    <div class="game-container">
-                        <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
-                        <p style="font-weight: bold;">Resident Evil: Requiem</p>
-                    </div>
-                    <div class="game-container">
-                        <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
-                        <p style="font-weight: bold;">Resident Evil: Requiem</p>
-                    </div>
-                    <div class="game-container">
-                        <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
-                        <p style="font-weight: bold;">Resident Evil: Requiem</p>
-                    </div>
+                    <a href="./requiem.html">
+                        <div class="game-container">
+                            <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
+                            <p class="title">Resident Evil: Requiem</p>
+                            <div class="rating good">
+                                <span class="rating-number">9</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./review.html">
+                        <div class="game-container" href="">
+                            <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
+                            <p class="title">Resident Evil: Requiem</p>
+                            <div class="rating good">
+                                <span class="rating-number">9</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./review.html">
+                        <div class="game-container">
+                            <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
+                            <p class="title">Resident Evil: Requiem</p>
+                            <div class="rating good">
+                                <span class="rating-number">9</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./review.html">
+                        <div class="game-container">
+                            <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
+                            <p class="title">Resident Evil: Requiem</p>
+                            <div class="rating good">
+                                <span class="rating-number">9</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -81,8 +102,37 @@
                 <h2 class="fw-bold">High Rated</h2>
             </div>
             <div class="alex-row">
-                <div class="game-container">
-                    <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
+                <div class="game-row">
+                    <div class="game-container">
+                        <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
+                        <p style="font-weight: bold;">Resident Evil: Requiem</p>
+                    </div>
+                    <div class="game-container">
+                        <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
+                        <p style="font-weight: bold;">Resident Evil: Requiem</p>
+                    </div>
+                    <div class="game-container">
+                        <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
+                        <p style="font-weight: bold;">Resident Evil: Requiem</p>
+                    </div>
+                    <div class="game-container">
+                        <img class="game-thumbnail" src="./images/re9-poster.jpg" alt="Resident Evil">
+                        <p style="font-weight: bold;">Resident Evil: Requiem</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="featured-section">
+            <h1 class="featured-header">Featured</h1>
+            <div class="featured-row">
+                <img class="featured-img" src="./images/outer-wilds.jpg" alt="Outer Wilds">
+                <div class="featured-info-column">
+                    <h2 class="fw-bold featured-title">Outer Wilds</h2>
+                    <p class="featured-paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis ullamcorper sem non consequat. Phasellus eu laoreet purus, a facilisis enim. Nullam eget purus sed lorem condimentum vestibulum. Maecenas suscipit efficitur efficitur. Duis euismod tincidunt justo auctor ornare. Suspendisse vel venenatis orci. Nullam et aliquam urna, in bibendum eros. Duis tincidunt nec sapien quis pharetra.
+
+                    In sed odio velit. Etiam luctus, odio ut pulvinar hendrerit, tellus tellus aliquet massa, in ultricies neque mi vitae nunc. In odio odio, gravida sit amet tincidunt interdum, hendrerit id nisl. Donec commodo justo lacus. Aliquam fermentum vel orci id dignissim. Etiam dapibus fringilla massa eget luctus. Praesent fermentum nisi purus, et commodo lacus vehicula at.
+
+                    Aenean et lacinia arcu, ac lobortis massa. Etiam laoreet ex nisi, id fermentum nibh ultricies elementum. Sed non justo velit. Aenean ut orci vel nulla placerat accumsan. Praesent iaculis iaculis lorem, non rutrum ipsum. Donec et volutpat magna, non lacinia mauris. Duis dolor velit, sodales luctus ex vel, tincidunt iaculis ex. Fusce ultricies, justo ut blandit feugiat, ipsum est eleifend augue, vitae tempor augue leo in quam. </p>
                 </div>
             </div>
         </div>
@@ -110,5 +160,29 @@
             </div>
         </div>
     </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", function(){
+    const buttonRight = document.getElementById('slideRight');
+    const buttonLeft = document.getElementById('slideLeft');
+    const container = document.getElementById('autoScroll');
+
+    const scrollAmount = 430;
+
+    buttonRight.onclick = function() {
+        container.scrollLeft += scrollAmount;
+    };
+
+    buttonLeft.onclick = function() {
+        container.scrollLeft -= scrollAmount;
+    };
+
+    container.addEventListener('scroll', function(){
+        buttonLeft.disabled = container.scrollLeft <= 0;
+        buttonRight.disabled = container.scrollLeft >= container.scrollWidth - container.clientWidth;
+    });
+
+    buttonLeft.disabled = true;
+});
+</script>
 </body>
 </html>
