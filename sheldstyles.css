@@ -125,11 +125,7 @@ body {
 .review-image{
     width: 75%;
     height: 300px;
-}
-
-.review-image-FFH{
-    width: 70%;
-    height: 300px;
+    border-radius: 10px;
 }
 
 .scrollControl-button {
@@ -140,7 +136,7 @@ body {
 .scrollControl-button button {
     padding: 7px 15px;
     margin: 0px 5px;
-    background: #cf88df;
+    background: #664fe0;
     color: white;
     border: none;
     border-radius: 50px;
@@ -150,7 +146,6 @@ body {
 }
 
 .scrollControl-button button:hover{
-    background: #c64fe0;
     transform: scale(1.15);
 }
 

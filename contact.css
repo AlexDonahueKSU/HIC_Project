@@ -54,6 +54,10 @@ body {
     border-color: green;
 }
 
+.invalid-feedback{
+    color: black;
+}
+
 .career{
     color: white;
 }

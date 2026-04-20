@@ -63,7 +63,7 @@
         <div class="w-75 mx-auto border-bottom border-black border-2 mb-3">
             <h2>Movie Reviews</h2>
         </div>
-        <div class="scroll-container scrollMenu" id="autoScroll">
+        <div class="scroll-container scrollMenu" id="movieScroll">
             <!--Reviews-->
             <button type="button" class="movie-buttons scroll-item">
                 <img class="review-image" src="/images/interstellar.jpg" alt="Interstellar">
@@ -102,15 +102,15 @@
             </button>
         </div>
         <div class="scrollControl-button">
-            <button id="slideLeft" type="button">←</button>
-            <button id="slideRight" type="button">→</button>
+            <button id="movieLeft" type="button">←</button>
+            <button id="movieRight" type="button">→</button>
         </div>
     </div>
     <div class="horizontal-scroll-wrapper-rated">
         <div class="w-75 mx-auto border-bottom border-black border-2 mb-3">
             <h2>High Rated</h2>
         </div>
-        <div class="scroll-container scrollMenu" id="autoScroll">
+        <div class="scroll-container scrollMenu" id="highRatedScroll">
             <!--Reviews-->
             <button type="button" class="movie-buttons scroll-item-rated">
                 <img class="review-image" src="/images/interstellar.jpg" alt="Interstellar">
@@ -120,10 +120,10 @@
                 </div>
             </button>
             <button type="button" class="movie-buttons scroll-item-rated">
-                <img class="review-image" src="/images/sharknado.jpeg" alt="Sharknado">
-                <h3>Sharknado</h3>
-                <div class="rating bad">
-                    <span class="rating-number">3</span>
+                <img class="review-image" src="/images/lalaLand.png" alt="La La Land">
+                <h3>La La Land</h3>
+                <div class="rating good">
+                    <span class="rating-number">9</span>
                 </div>
             </button>
             <button type="button" class="movie-buttons scroll-item-rated">
@@ -148,9 +148,10 @@
                 </div>
             </button>
         </div>
+        <!--High Rated Scroll Button-->
         <div class="scrollControl-button">
-            <button id="slideLeft" type="button">←</button>
-            <button id="slideRight" type="button">→</button>
+            <button id="highRatedLeft" type="button">←</button>
+            <button id="highRatedRight" type="button">→</button>
         </div>
     </div>
     <div class="featured-section">
@@ -193,26 +194,31 @@
 </footer>
 <script>
 document.addEventListener("DOMContentLoaded", function(){
-    const buttonRight = document.getElementById('slideRight');
-    const buttonLeft = document.getElementById('slideLeft');
-    const container = document.getElementById('autoScroll');
+    // Function to initialize a carousel
+    function initCarousel(leftBtnId, rightBtnId, containerId, scrollAmount) {
+        const buttonRight = document.getElementById(rightBtnId);
+        const buttonLeft = document.getElementById(leftBtnId);
+        const container = document.getElementById(containerId);
 
-    const scrollAmount = 430;
+        buttonRight.onclick = function() {
+            container.scrollLeft += scrollAmount;
+        };
 
-    buttonRight.onclick = function() {
-        container.scrollLeft += scrollAmount;
-    };
+        buttonLeft.onclick = function() {
+            container.scrollLeft -= scrollAmount;
+        };
 
-    buttonLeft.onclick = function() {
-        container.scrollLeft -= scrollAmount;
-    };
+        container.addEventListener('scroll', function(){
+            buttonLeft.disabled = container.scrollLeft <= 0;
+            buttonRight.disabled = container.scrollLeft >= container.scrollWidth - container.clientWidth;
+        });
 
-    container.addEventListener('scroll', function(){
-        buttonLeft.disabled = container.scrollLeft <= 0;
-        buttonRight.disabled = container.scrollLeft >= container.scrollWidth - container.clientWidth;
-    });
+        buttonLeft.disabled = true;
+    }
 
-    buttonLeft.disabled = true;
+    // Initialize both carousels
+    initCarousel('movieLeft', 'movieRight', 'movieScroll', 270);
+    initCarousel('highRatedLeft', 'highRatedRight', 'highRatedScroll', 270);
 });
 </script>
 </body>
