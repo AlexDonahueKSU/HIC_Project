@@ -2,6 +2,12 @@ body {
     font-family: Inter, Arial, Helvetica, sans-serif !important;
 }
 
+h3
+{
+    margin-top: -10px;
+    padding-bottom: -10px;
+}
+
 .header-row {
     display: flex; 
     flex-direction: row; 
@@ -19,7 +25,7 @@ body {
 }
 
 .h1-text{
-    color: #E29DD0;
+    color: #9853E0;
     font-size: 5rem;
 }
 
@@ -58,12 +64,15 @@ body {
 
 .scroll-container{
     display: flex;
+    justify-content: space-around;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
     gap: 20px;
     padding: 10px;
     margin-left: 40px;
+    width: 75%;
+    margin: 0 auto;
     scrollbar-width: none; /* Firfox Functionality*/
     -ms-overflow-style: none; /* Edge Functionality */
 }
@@ -124,7 +133,8 @@ body {
 
 .review-image{
     width: 75%;
-    height: 300px;
+    min-height: 300px;
+    width: 225px !important;
     border-radius: 10px;
 }
 
@@ -226,6 +236,10 @@ body {
     height: 30px;
     border-radius: 5px;
     margin-bottom: 5px;
+}
+
+span.rating-number
+{
 }
 
 .rating-number

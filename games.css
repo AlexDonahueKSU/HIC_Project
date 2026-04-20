@@ -9,7 +9,7 @@ a
     flex-wrap: wrap; 
     justify-content: space-between;
     width: 75%;
-    margin: 0 auto;
+    margin-bottom: 55px !important;
 }
 
 .textbox
@@ -104,7 +104,6 @@ a
 
 .game-thumbnail
 {
-    
     height: 300px;
     width: 225px;
     border-radius: 10px;

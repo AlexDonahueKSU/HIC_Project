@@ -69,3 +69,24 @@ body {
 .footer-titles{
     color: #9853e0;
 }
+
+.header-row {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    width: 75%;
+    margin-bottom: 55px !important;
+}
+
+.alex-purple {
+    color: #9853E0;
+}
+
+.footer-link {
+    color: white;
+}
+.footer-link:hover
+{
+    color: #9853E0;
+}

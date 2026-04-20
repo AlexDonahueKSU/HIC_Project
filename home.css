@@ -7,6 +7,15 @@ a {
     text-decoration: none;
 }
 
+.header-row {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto;
+}
+
 .alex-row {
     display: flex; 
     flex-direction: row; 

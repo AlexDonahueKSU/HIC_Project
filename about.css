@@ -35,3 +35,12 @@
     background-color: #e04f62;
     margin-bottom: 20px;
 }
+
+.header-row {
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    width: 75%;
+    margin-bottom: 55px !important;
+}
