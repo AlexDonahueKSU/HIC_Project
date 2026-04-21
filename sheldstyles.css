@@ -35,7 +35,7 @@ h3
 
 .movie-buttons:hover{
     color: black;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .horizontal-scroll-wrapper{
@@ -156,7 +156,7 @@ h3
 }
 
 .scrollControl-button button:hover{
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 
 .scrollControl-button button:disabled{
@@ -236,11 +236,10 @@ h3
     height: 30px;
     border-radius: 5px;
     margin-bottom: 5px;
+    margin-top: -10px;
 }
 
-span.rating-number
-{
-}
+
 
 .rating-number
 {
