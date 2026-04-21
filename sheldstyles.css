@@ -264,9 +264,3 @@ h3
 {
     background-color: #ad3939;
 }
-
-@media screen and (min-width: 1300px){
-    .scrollControl-button{
-        display: none;
-    }
-}
