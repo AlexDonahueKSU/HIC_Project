@@ -56,7 +56,7 @@
         <div class="w-75 mx-auto border-bottom border-black border-2 mb-3">
             <h2 class="fw-bold" style="margin-bottom: 5px; margin-left: -15px;">Most Viewed</h2>
         </div>
-        <div class="scroll-container scrollMenu" id="movieScroll">
+        <div class="scroll-container scrollMenu" id="viewedScroll">
             <!--Reviews-->
             <button type="button" class="movie-buttons scroll-item" onclick="location.href='review.html'">
                 <img class="review-image" src="/images/interstellar.jpg" alt="Interstellar">
@@ -95,8 +95,8 @@
             </button>
         </div>
         <div class="scrollControl-button">
-            <button id="movieLeft" type="button">←</button>
-            <button id="movieRight" type="button">→</button>
+            <button id="viewedLeft" type="button">←</button>
+            <button id="viewedRight" type="button">→</button>
         </div>
     </div>
     <div class="horizontal-scroll-wrapper-rated">
@@ -165,7 +165,7 @@
         <div class="w-75 mx-auto border-bottom border-black border-2 mb-3">
             <h2 class="fw-bold">High Rated</h2>
         </div>
-        <div class="scroll-container scrollMenu" id="highRatedScroll">
+        <div class="scroll-container scrollMenu" id="newScroll">
             <!--Reviews-->
             <button type="button" class="movie-buttons scroll-item-rated" onclick="location.href='review.html'">
                 <img class="review-image" src="/images/interstellar.jpg" alt="Interstellar">
@@ -205,15 +205,15 @@
         </div>
         <!--High Rated Scroll Button-->
         <div class="scrollControl-button">
-            <button id="highRatedLeft" type="button">←</button>
-            <button id="highRatedRight" type="button">→</button>
+            <button id="newLeft" type="button">←</button>
+            <button id="newRight" type="button">→</button>
         </div>
     </div>
     <div class="horizontal-scroll-wrapper">
         <div class="w-75 mx-auto border-bottom border-black border-2 mb-3">
             <h2 class="fw-bold" style="margin-bottom: 5px; margin-left: -15px;">Most Viewed</h2>
         </div>
-        <div class="scroll-container scrollMenu" id="movieScroll">
+        <div class="scroll-container scrollMenu" id="oldScroll">
             <!--Reviews-->
             <button type="button" class="movie-buttons scroll-item" onclick="location.href='review.html'">
                 <img class="review-image" src="/images/interstellar.jpg" alt="Interstellar">
@@ -252,8 +252,8 @@
             </button>
         </div>
         <div class="scrollControl-button">
-            <button id="movieLeft" type="button">←</button>
-            <button id="movieRight" type="button">→</button>
+            <button id="oldLeft" type="button">←</button>
+            <button id="oldRight" type="button">→</button>
         </div>
     </div>
     </main>
@@ -305,8 +305,10 @@
     }
 
     // Initialize both carousels
-    initCarousel('movieLeft', 'movieRight', 'movieScroll', 270);
+    initCarousel('viewedLeft', 'viewedRight', 'viewedScroll', 270);
     initCarousel('highRatedLeft', 'highRatedRight', 'highRatedScroll', 270);
+    initCarousel('newLeft', 'newRight', 'newScroll', 270);
+    initCarousel('oldLeft', 'oldRight', 'oldScroll', 270);
 });
 </script>
 </body>
