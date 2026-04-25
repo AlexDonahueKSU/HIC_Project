@@ -36,4 +36,45 @@ h1
     font-style: italic;
 }
 
+.image-row 
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.body-image 
+{
+
+    max-width: 800px;
+    width: 90%;
+}
+
+.quote-container
+{
+    display: flex;
+    background-color: #ad3939;
+    min-height: 150px;
+    margin-bottom: 10px;
+}
+
+.quote-text 
+{ 
+    font-size: 4rem; 
+}
+
+.top-button 
+{
+    background-color: #ad3939;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+}
+.top-button:hover
+{
+    background-color: #9853e0;
+}
+
 
